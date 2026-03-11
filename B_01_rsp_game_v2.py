@@ -55,7 +55,6 @@ def int_check(question):
         if to_check == "":
             return "infinite"
         try:
-            # response = int(input("Please enter a integer. "))
             response = int(to_check)
 
             #checks the number is more than / equal to 1
@@ -193,20 +192,20 @@ while rounds_played < num_rounds:
 
 # Game loop ends here
 
-    # Game history / statistics area
+# Game history / statistics area
 
 if rounds_played > 0:
     #calculate statistics
     rounds_won = rounds_played - rounds_tied - rounds_lost
-    percentage_won = rounds_won / rounds_played * 100
-    percentage_lost = rounds_won / rounds_played * 100
-    percentage_tied = 100 - percentage_won - percentage_lost
+    percent_won = rounds_won / rounds_played * 100
+    percent_lost = rounds_lost / rounds_played * 100
+    percent_tied = 100 - percent_won - percent_lost
 
     # Output Game statistics
     print("Game statistics")
-    print(f"Won: {percentage_won:.2f} \t "
-          f"Lost: {percentage_lost:.2f} \t "
-          f"Tied: {percentage_tied:.2f}")
+    print(f"Won: {percent_won:.2f} \t "
+          f"Lost: {percent_lost:.2f} \t "
+          f"Tied: {percent_tied:.2f}")
 
     # ask if user want see game history and output if requested
     see_history = input("\nWould you like to see the games history ")
